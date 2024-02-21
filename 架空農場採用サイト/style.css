@@ -773,6 +773,9 @@ p {
     margin: 0;
   }
 
+  header {
+    position: relative;
+  }
   /* PC用ナビゲーション非表示 */
   #nav-pc {
     display: none;
@@ -783,16 +786,18 @@ p {
     position: absolute;
     top: 0px;
     right: 0px;
+    
   }
 
   /* スマホ用ナビゲーションの表示切替*/
   /* 初期状態、レイアウトと非表示設定 */
+  
   #nav-sp {
     background-color: #276a3e;
     position: absolute;
     left: 0;
     top: 0;
-    height: 55%;
+    height: 55vh;
     width: 100%;
     display: none;
     z-index: 100;
@@ -1025,6 +1030,10 @@ p {
   .mobile-blocky td {
     border-top: solid 1px #333;
     padding-left: 5px;
+  }
+  
+  .infomation_wrap table {
+    border-collapse: collapse;
   }
   /*会社概要*/
   #company {
