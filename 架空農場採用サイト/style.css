@@ -31,6 +31,7 @@ p {
   header {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   /* ナビゲーションのレイアウト */
@@ -64,7 +65,9 @@ p {
   #menu-sp {
     display: none;
   }
-
+ #nav-sp {
+  display: none!important;
+ }
   /* メインビジュアル*/
 
   .firstview-container {
@@ -85,14 +88,14 @@ p {
     object-fit: cover;
 
     opacity: 0;
-    animation: change-img-anim 12s infinite;
+    animation: change-img-anim 13s infinite;
   }
 
   .firstview-Img:nth-of-type(1) {
-    animation: change-img-anim-first 12s infinite;
+    animation: change-img-anim-first 13s infinite;
   }
   .firstview-Img:nth-of-type(2) {
-    animation-delay: 4s;
+    animation-delay: 5s;
   }
   .firstview-Img:nth-of-type(3) {
     animation-delay: 8s;
@@ -132,6 +135,8 @@ p {
       opacity: 0;
     }
   }
+
+  
   /* フェードインするテキストのスタイル */
   .fade-in-text {
     position: absolute;
@@ -140,8 +145,17 @@ p {
     color: white;
     opacity: 0;
     animation: fade-in-anim 10s forwards; /* アニメーションの時間を調整 */
+    text-align: center;
   }
+  .text-shadow {
+    font-size: 46px; /* テキストのサイズを調整 */
+    color: #ffffff; /* テキストの色を設定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影を追加 */
+  }
+ .fade-in-text-box {
+  display: inline-block;
 
+  }
   @keyframes fade-in-anim {
     0% {
       opacity: 0;
@@ -151,11 +165,7 @@ p {
     }
   }
 
-  .text-shadow {
-    font-size: 46px; /* テキストのサイズを調整 */
-    color: #ffffff; /* テキストの色を設定 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影を追加 */
-  }
+  
   /*見出し*/
   h2 {
     margin: 40px 0 20px 0;
@@ -678,6 +688,7 @@ p {
   }
 }
 
+
 /*====================
  スマートフォン用のスタイル
 =====================*/
@@ -694,7 +705,9 @@ p {
   .firstview-Img {
     position: absolute;
     width: 100%;
+    height: 100%;
     opacity: 0;
+    object-fit: cover;
     animation: change-img-anim 12s infinite;
   }
 
@@ -752,6 +765,13 @@ p {
     animation: fade-in-anim 10s forwards; /* アニメーションの時間を調整 */
     text-align: center;
   }
+  .text-shadow {
+    font-size: 24px; /* テキストのサイズを調整 */
+    color: #ffffff; /* テキストの色を設定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影を追加 */
+    text-align: center;
+  }
+  
 
   @keyframes fade-in-anim {
     0% {
@@ -762,15 +782,11 @@ p {
     }
   }
 
-  .text-shadow {
-    font-size: 24px; /* テキストのサイズを調整 */
-    color: #ffffff; /* テキストの色を設定 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影を追加 */
-    text-align: center;
-  }
+  
   body {
     min-width: 375px;
-    margin: 0;
+    margin: 0 ;
+  
   }
 
   header {
@@ -797,7 +813,7 @@ p {
     position: absolute;
     left: 0;
     top: 0;
-    height: 55vh;
+    height: 100vh;
     width: 100%;
     display: none;
     z-index: 100;
